@@ -2,47 +2,47 @@ import { whatsappLink } from "../config";
 import "./Pricing.css";
 
 /*
-  Editá los planes acá. Si querés mostrar precios,
-  cambiá price: "Consultar" por el valor (ej. "$45.000").
+  Edit the packages here. To show prices,
+  swap price: "Get a quote" for the amount (e.g. "$120").
 */
 const plans = [
   {
-    name: "Essential",
-    price: "Consultar",
-    tag: "Mantenimiento",
+    name: "Express Wash",
+    price: "Get a quote",
+    tag: "Maintenance",
     featured: false,
     items: [
-      "Lavado a mano two-bucket",
-      "Descontaminación con arcilla",
-      "Cera carnauba premium",
-      "Limpieza de llantas y neumáticos",
-      "Vidrios y detalles finales",
+      "Two-bucket hand wash",
+      "Wheels, tyres and arches",
+      "Windows inside and out",
+      "Streak-free hand dry",
+      "Tyre shine finish",
     ],
   },
   {
-    name: "Premium",
-    price: "Consultar",
-    tag: "El más elegido",
+    name: "Full Detail",
+    price: "Get a quote",
+    tag: "Most popular",
     featured: true,
     items: [
-      "Todo lo de Essential",
-      "Paint correction 1 etapa",
-      "Interior deep clean completo",
-      "Acondicionado de plásticos y cueros",
-      "Sellador sintético 6 meses",
+      "Everything in Express Wash",
+      "Interior vacuum and wipe down",
+      "Upholstery and carpet clean",
+      "Dashboard and plastics dressed",
+      "Door jambs and boot detailed",
     ],
   },
   {
-    name: "Signature",
-    price: "Consultar",
-    tag: "Protección total",
+    name: "Premium Detail",
+    price: "Get a quote",
+    tag: "Full treatment",
     featured: false,
     items: [
-      "Todo lo de Premium",
-      "Paint correction multietapa",
-      "Ceramic coating 2–5 años",
-      "Engine bay detail",
-      "Restauración de faros",
+      "Everything in Full Detail",
+      "Exterior decontamination",
+      "Machine polish for gloss",
+      "Paint protection applied",
+      "Engine bay clean-up",
     ],
   },
 ];
@@ -52,13 +52,13 @@ export default function Pricing() {
     <section className="pricing section" id="pricing">
       <div className="container">
         <div className="pricing-header reveal">
-          <span className="section-label">Planes</span>
+          <span className="section-label">Packages</span>
           <h2 className="section-title">
-            Elegí tu <span className="text-red">nivel de detalle</span>
+            Choose your <span className="text-red">level of detail</span>
           </h2>
           <p className="section-desc">
-            Tres paquetes pensados para cada necesidad. Todos incluyen productos
-            premium y el mismo estándar de calidad.
+            Three packages to suit every need. Pricing depends on the size and
+            condition of your vehicle — message us for an exact quote.
           </p>
         </div>
 
@@ -84,12 +84,12 @@ export default function Pricing() {
               </ul>
 
               <a
-                href={whatsappLink(`Hola! Quiero consultar por el plan ${p.name}.`)}
+                href={whatsappLink(`Hi! I'd like a quote for the ${p.name} package.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`btn ${p.featured ? "btn--primary" : "btn--outline"} plan__btn`}
               >
-                Consultar
+                Enquire
               </a>
             </div>
           ))}

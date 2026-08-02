@@ -64,7 +64,6 @@
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--text-dim);
-  flex: 1;
 }
 
 .svc__cta {
@@ -88,3 +87,30 @@
 }
 
 .svc:hover .svc__cta svg { transform: translateX(5px); }
+
+.svc__list {
+  position: relative;
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.svc__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.svc__list svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--accent);
+}

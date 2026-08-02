@@ -3,17 +3,17 @@ import { asset } from "../config";
 import "./Gallery.css";
 
 /*
-  Agregá tus fotos en:  public/img/gallery/
-  Formato:  1-antes.jpg  /  1-despues.jpg  (hasta el id que quieras)
-  Arrastrá el divisor de cada tarjeta para comparar.
+  Drop your photos into:  public/img/gallery/
+  Naming:  1-antes.jpg  /  1-despues.jpg  (as many ids as you like)
+  Drag the divider on each card to compare.
 */
 const pairs = [
-  { id: 1, name: "Toyota Corolla",   service: "Paint Correction + Ceramic" },
-  { id: 2, name: "Ford Mustang",     service: "Full Detail Exterior" },
-  { id: 3, name: "Honda Civic",      service: "Interior Deep Clean" },
-  { id: 4, name: "BMW Serie 3",      service: "Ceramic Coating" },
-  { id: 5, name: "Chevrolet Cruze",  service: "Paint Correction" },
-  { id: 6, name: "Volkswagen Vento", service: "Hand Wash & Wax" },
+  { id: 1, name: "Toyota HiLux",      service: "Full Exterior Detail" },
+  { id: 2, name: "Ford Ranger",       service: "Wash & Polish" },
+  { id: 3, name: "Mazda 3",           service: "Interior Deep Clean" },
+  { id: 4, name: "Holden Commodore",  service: "Auto Detailing" },
+  { id: 5, name: "Subaru WRX",        service: "Exterior Detail" },
+  { id: 6, name: "Toyota LandCruiser", service: "Hand Wash & Interior" },
 ];
 
 export default function Gallery() {
@@ -21,13 +21,13 @@ export default function Gallery() {
     <section className="gallery section section--alt" id="gallery">
       <div className="container">
         <div className="gallery-header reveal">
-          <span className="section-label">Nuestro Trabajo</span>
+          <span className="section-label">Our Work</span>
           <h2 className="section-title">
-            Antes &amp; <span className="text-red">Después</span>
+            Before &amp; <span className="text-red">After</span>
           </h2>
           <p className="section-desc">
-            Deslizá el divisor sobre cada foto y mirá la transformación real,
-            sin filtros ni fotos de stock.
+            Drag the divider across each photo to see the real transformation —
+            no filters, no stock images.
           </p>
         </div>
 

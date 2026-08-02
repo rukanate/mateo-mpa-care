@@ -3,13 +3,13 @@ import { whatsappLink } from "../config";
 import "./Navbar.css";
 
 const links = [
-  { label: "Inicio",    href: "#hero" },
-  { label: "Nosotros",  href: "#about" },
-  { label: "Galería",   href: "#gallery" },
-  { label: "Servicios", href: "#services" },
-  { label: "Planes",    href: "#pricing" },
+  { label: "Home",      href: "#hero" },
+  { label: "About",     href: "#about" },
+  { label: "Gallery",   href: "#gallery" },
+  { label: "Services",  href: "#services" },
+  { label: "Pricing",   href: "#pricing" },
   { label: "Portfolio", href: "#projects" },
-  { label: "Contacto",  href: "#contact" },
+  { label: "Contact",   href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <header className={`navbar${scrolled ? " navbar--scrolled" : ""}`}>
-      <nav className="navbar-inner container" aria-label="Navegación principal">
+      <nav className="navbar-inner container" aria-label="Main navigation">
         <a href="#hero" className="navbar-brand" onClick={() => setMenuOpen(false)}>
           <span className="navbar-brand__mark">MPA</span>
           <span className="navbar-brand__text">
@@ -48,13 +48,13 @@ export default function Navbar() {
           ))}
           <li className="navbar-links__cta">
             <a
-              href={whatsappLink("Hola! Quiero reservar un turno para mi auto.")}
+              href={whatsappLink("Hi! I'd like to book my car in.")}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--primary navbar-cta"
               onClick={() => setMenuOpen(false)}
             >
-              Reservar
+              Book Now
             </a>
           </li>
         </ul>
@@ -62,7 +62,7 @@ export default function Navbar() {
         <button
           className={`navbar-burger${menuOpen ? " navbar-burger--open" : ""}`}
           onClick={() => setMenuOpen((v) => !v)}
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
           <span />

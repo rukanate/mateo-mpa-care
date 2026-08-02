@@ -8,8 +8,8 @@ type Props = {
 };
 
 /*
-  Comparador antes/después arrastrable.
-  Deslizá el divisor con el mouse, el dedo o las flechas del teclado.
+  Draggable before/after comparison slider.
+  Move the divider with the mouse, a finger or the arrow keys.
 */
 export default function BeforeAfter({ before, after, alt }: Props) {
   const [pos, setPos] = useState(50);
@@ -41,7 +41,7 @@ export default function BeforeAfter({ before, after, alt }: Props) {
     return (
       <div className="ba ba--placeholder" aria-label={alt}>
         <span className="ba-placeholder__icon">🖼</span>
-        <p>Foto próximamente</p>
+        <p>Photo coming soon</p>
       </div>
     );
   }
@@ -58,7 +58,7 @@ export default function BeforeAfter({ before, after, alt }: Props) {
       <img
         className="ba-img ba-img--after"
         src={after}
-        alt={`${alt} — después del detailing`}
+        alt={`${alt} — after detailing`}
         loading="lazy"
         decoding="async"
         draggable={false}
@@ -68,7 +68,7 @@ export default function BeforeAfter({ before, after, alt }: Props) {
         <img
           className="ba-img ba-img--before"
           src={before}
-          alt={`${alt} — antes del detailing`}
+          alt={`${alt} — before detailing`}
           loading="lazy"
           decoding="async"
           draggable={false}
@@ -77,10 +77,10 @@ export default function BeforeAfter({ before, after, alt }: Props) {
       </div>
 
       <span className="ba-badge ba-badge--before" style={{ opacity: pos > 18 ? 1 : 0 }}>
-        Antes
+        Before
       </span>
       <span className="ba-badge ba-badge--after" style={{ opacity: pos < 82 ? 1 : 0 }}>
-        Después
+        After
       </span>
 
       <div className="ba-divider" style={{ left: `${pos}%` }} aria-hidden="true">
@@ -91,7 +91,7 @@ export default function BeforeAfter({ before, after, alt }: Props) {
         </span>
       </div>
 
-      {/* Control accesible por teclado / lectores de pantalla */}
+      {/* Keyboard / screen-reader accessible control */}
       <input
         type="range"
         className="ba-range"
@@ -99,7 +99,7 @@ export default function BeforeAfter({ before, after, alt }: Props) {
         max={100}
         value={Math.round(pos)}
         onChange={(e) => setPos(Number(e.target.value))}
-        aria-label={`Comparar antes y después: ${alt}`}
+        aria-label={`Compare before and after: ${alt}`}
       />
     </div>
   );

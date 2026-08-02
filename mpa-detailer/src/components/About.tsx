@@ -3,23 +3,23 @@ import "./About.css";
 const features = [
   {
     num: "01",
-    title: "Polishing",
-    desc: "Eliminamos rayaduras, marcas de remolino y oxidación para restaurar el brillo original de la pintura.",
+    title: "Hand Wash",
+    desc: "Two-bucket hand wash that lifts dirt without marring your paint — wheels, tyres and glass included.",
   },
   {
     num: "02",
     title: "Interior Care",
-    desc: "Limpieza profunda y desinfección de tapizados, alfombras, tablero y plásticos — como nuevo.",
+    desc: "Deep clean of seats, carpets, dashboard and plastics. Your cabin looks and smells brand new.",
   },
   {
     num: "03",
-    title: "Ceramic Coating",
-    desc: "Protección nano-cerámica de larga duración con acabado espejo que repele agua, barro y UV.",
+    title: "Exterior Detail",
+    desc: "Decontamination, polish and protection to bring back the depth and gloss of your paintwork.",
   },
   {
     num: "04",
-    title: "Hand Wash",
-    desc: "Lavado a mano con método two-bucket y arcilla descontaminante que preserva tu clear coat.",
+    title: "Automotive Service",
+    desc: "General care to keep your vehicle in top shape, inside and out, wash after wash.",
   },
 ];
 
@@ -28,14 +28,14 @@ export default function About() {
     <section className="about section" id="about">
       <div className="container">
         <div className="about-header reveal">
-          <span className="section-label">Quiénes Somos</span>
+          <span className="section-label">Who We Are</span>
           <h2 className="section-title">
-            Sobre <span className="text-red">MPA Detailer</span>
+            About <span className="text-red">MPA Detailer</span>
           </h2>
           <p className="section-desc">
-            Nos especializamos en detailing profesional y restauración de vehículos.
-            Cada auto que trabajamos recibe precisión, pasión y el cuidado que merece —
-            con productos premium y técnicas avanzadas.
+            We're a Gold Coast car care studio based in Bundall. Every vehicle that
+            comes through gets precision, care and the attention it deserves —
+            with premium products and methods that actually protect your paint.
           </p>
         </div>
 

@@ -3,23 +3,23 @@ import "./Process.css";
 const steps = [
   {
     num: "01",
-    title: "Contactanos",
-    desc: "Escribinos por WhatsApp contándonos qué auto tenés y qué necesita. Te respondemos en el día.",
+    title: "Get in touch",
+    desc: "Message us on WhatsApp with your car and what it needs. We usually reply the same day.",
   },
   {
     num: "02",
-    title: "Diagnóstico",
-    desc: "Evaluamos el estado de la pintura y el interior, y te pasamos un presupuesto claro y sin sorpresas.",
+    title: "Quote",
+    desc: "We assess the condition of the paint and interior, then give you a clear quote with no surprises.",
   },
   {
     num: "03",
-    title: "Manos a la obra",
-    desc: "Trabajamos tu auto con productos premium y procesos probados. Te mandamos avances del trabajo.",
+    title: "We get to work",
+    desc: "Your car gets premium products and proven methods. We send you progress photos along the way.",
   },
   {
     num: "04",
-    title: "Entrega",
-    desc: "Retirás tu auto con brillo de fábrica, junto con consejos de mantenimiento para que dure.",
+    title: "Handover",
+    desc: "Pick up your car looking its best, along with tips on how to keep it that way for longer.",
   },
 ];
 
@@ -28,9 +28,9 @@ export default function Process() {
     <section className="process section section--alt" id="process">
       <div className="container">
         <div className="process-header reveal">
-          <span className="section-label">Cómo Trabajamos</span>
+          <span className="section-label">How We Work</span>
           <h2 className="section-title">
-            Simple, claro y <span className="text-red">sin vueltas</span>
+            Simple, clear and <span className="text-red">no fuss</span>
           </h2>
         </div>
 

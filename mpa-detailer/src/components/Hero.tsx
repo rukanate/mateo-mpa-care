@@ -2,15 +2,15 @@ import { whatsappLink } from "../config";
 import "./Hero.css";
 
 const stats = [
-  { value: "+250", label: "Autos detallados" },
-  { value: "5★",   label: "Calificación clientes" },
-  { value: "+5",   label: "Años de experiencia" },
-  { value: "100%", label: "Productos premium" },
+  { value: "250+", label: "Cars detailed" },
+  { value: "5★",   label: "Customer rating" },
+  { value: "5+",   label: "Years of experience" },
+  { value: "100%", label: "Premium products" },
 ];
 
 const ticker = [
-  "Paint Correction", "Ceramic Coating", "Interior Deep Clean",
-  "Hand Wash & Wax", "Engine Bay Detail", "Headlight Restoration",
+  "Auto Detailing", "Hand Wash", "Interior Deep Clean",
+  "Exterior Detail", "Automotive Service", "Wash & Polish",
 ];
 
 export default function Hero() {
@@ -26,30 +26,31 @@ export default function Hero() {
       <div className="hero-content container">
         <p className="hero-eyebrow">
           <span className="hero-eyebrow__dot" />
-          Detailing profesional · Buenos Aires
+          Professional detailing · Bundall, Gold Coast
         </p>
 
         <h1 className="hero-title">
-          Tu auto, con brillo<br />
-          <span className="hero-accent">de fábrica</span> otra vez.
+          Your car, with<br />
+          <span className="hero-accent">showroom shine</span><br />
+          all over again.
         </h1>
 
         <p className="hero-sub">
-          Estudio de detailing especializado en paint correction, ceramic coating
-          y limpieza interior profunda. Productos premium, técnicas avanzadas y
-          obsesión por el detalle.
+          Car care studio in Bundall specialising in auto detailing, hand wash
+          and automotive service. Premium products, proven methods and an
+          obsession with the details.
         </p>
 
         <div className="hero-actions">
           <a
-            href={whatsappLink("Hola! Quiero reservar un turno para mi auto.")}
+            href={whatsappLink("Hi! I'd like to book my car in.")}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--primary"
           >
-            Reservar Turno
+            Book Now
           </a>
-          <a href="#gallery" className="btn btn--outline">Ver Resultados</a>
+          <a href="#gallery" className="btn btn--outline">See Results</a>
         </div>
 
         <dl className="hero-stats">
@@ -62,11 +63,11 @@ export default function Hero() {
         </dl>
       </div>
 
-      <a href="#about" className="hero-scroll" aria-label="Bajar a la siguiente sección">
+      <a href="#about" className="hero-scroll" aria-label="Scroll to next section">
         <span />
       </a>
 
-      {/* Cinta de servicios */}
+      {/* Services ticker */}
       <div className="hero-ticker" aria-hidden="true">
         <div className="hero-ticker__track">
           {[...ticker, ...ticker].map((t, i) => (

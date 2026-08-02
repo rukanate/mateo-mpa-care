@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 /*
-  Animación de entrada al hacer scroll.
-  Marcá cualquier elemento con class="reveal" (o reveal + reveal-delay-N)
-  y este hook le agrega .is-visible cuando entra al viewport.
-  Respeta prefers-reduced-motion.
+  Scroll-in reveal animation.
+  Tag any element with class="reveal" (or reveal + reveal-delay-N) and this
+  hook adds .is-visible once it enters the viewport.
+  Respects prefers-reduced-motion.
 */
 export function useReveal() {
   useEffect(() => {

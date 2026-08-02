@@ -7,12 +7,12 @@ export default function Contact() {
   const [car, setCar] = useState("");
   const [message, setMessage] = useState("");
 
-  /* Sin backend: el formulario arma un mensaje y lo abre en WhatsApp. */
+  /* No backend: the form builds a message and opens it in WhatsApp. */
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text =
-      `Hola! Soy ${name.trim()}.` +
-      (car.trim() ? ` Tengo un ${car.trim()}.` : "") +
+      `Hi! I'm ${name.trim()}.` +
+      (car.trim() ? ` I have a ${car.trim()}.` : "") +
       ` ${message.trim()}`;
     window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
   };
@@ -20,15 +20,15 @@ export default function Contact() {
   return (
     <footer className="contact section" id="contact">
       <div className="container contact-inner">
-        {/* Izquierda — info */}
+        {/* Left — info */}
         <div className="contact-left reveal">
-          <span className="section-label">Hablemos</span>
+          <span className="section-label">Let's talk</span>
           <h2 className="section-title">
-            ¿Listo para <span className="text-red">transformar</span>
-            <br />tu auto?
+            Ready to <span className="text-red">transform</span>
+            <br />your car?
           </h2>
           <p className="contact-sub">
-            Escribinos y coordinamos un turno. Respondemos en menos de 24 horas.
+            Send us a message and we'll book you in. We reply within 24 hours.
           </p>
 
           <ul className="contact-info">
@@ -46,7 +46,7 @@ export default function Contact() {
                   <path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" />
                 </svg>
               </span>
-              <a href={whatsappLink("Hola! Quiero hacer una consulta.")} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappLink("Hi! I'd like to make an enquiry.")} target="_blank" rel="noopener noreferrer">
                 {BUSINESS.phoneDisplay}
               </a>
             </li>
@@ -87,20 +87,20 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Derecha — formulario */}
+        {/* Right — form */}
         <div className="contact-right reveal reveal-delay-2">
           <form className="contact-form card" onSubmit={onSubmit}>
-            <h3 className="contact-form__title">Pedí tu presupuesto</h3>
+            <h3 className="contact-form__title">Get a quote</h3>
             <p className="contact-form__hint">
-              Completá el formulario y el mensaje se abre directo en nuestro WhatsApp.
+              Fill in the form and your message opens straight in our WhatsApp.
             </p>
 
             <div className="form-group">
-              <label htmlFor="cf-name">Nombre</label>
+              <label htmlFor="cf-name">Name</label>
               <input
                 id="cf-name"
                 type="text"
-                placeholder="Tu nombre"
+                placeholder="Your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 maxLength={80}
@@ -109,11 +109,11 @@ export default function Contact() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="cf-car">Vehículo (opcional)</label>
+              <label htmlFor="cf-car">Vehicle (optional)</label>
               <input
                 id="cf-car"
                 type="text"
-                placeholder="Marca, modelo y año"
+                placeholder="Make, model and year"
                 value={car}
                 onChange={(e) => setCar(e.target.value)}
                 maxLength={80}
@@ -121,10 +121,10 @@ export default function Contact() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="cf-msg">Mensaje</label>
+              <label htmlFor="cf-msg">Message</label>
               <textarea
                 id="cf-msg"
-                placeholder="Contanos qué servicio necesitás..."
+                placeholder="Tell us which service you need..."
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -134,19 +134,19 @@ export default function Contact() {
             </div>
 
             <button type="submit" className="btn btn--whatsapp contact-submit">
-              Enviar por WhatsApp
+              Send via WhatsApp
             </button>
           </form>
         </div>
       </div>
 
-      {/* Barra inferior */}
+      {/* Bottom bar */}
       <div className="contact-bottom">
         <div className="container contact-bottom__inner">
           <p className="contact-bottom__brand">
             <strong>MPA</strong> Detailer
           </p>
-          <p>© {new Date().getFullYear()} {BUSINESS.name} Car Care. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved.</p>
           <div className="contact-bottom__socials">
             <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>

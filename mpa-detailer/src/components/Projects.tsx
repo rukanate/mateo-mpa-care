@@ -3,17 +3,17 @@ import { asset } from "../config";
 import "./Projects.css";
 
 /*
-  Colocá tus imágenes en: public/img/
-  Nombres: projecto1.jpg … projecto6.jpg
-  (sin espacios, sin recompilar al cambiar fotos)
+  Drop your images into: public/img/
+  Naming: projecto1.jpg … projecto6.jpg
+  (no spaces, no rebuild needed when you swap photos)
 */
 const projects = [
-  { id: 1, name: "Proyecto 1", img: "img/projecto1.jpg" },
-  { id: 2, name: "Proyecto 2", img: "img/projecto2.jpg" },
-  { id: 3, name: "Proyecto 3", img: "img/projecto3.jpg" },
-  { id: 4, name: "Proyecto 4", img: "img/projecto4.jpg" },
-  { id: 5, name: "Proyecto 5", img: "img/projecto5.jpg" },
-  { id: 6, name: "Proyecto 6", img: "img/projecto6.jpg" },
+  { id: 1, name: "Project 1", img: "img/projecto1.jpg" },
+  { id: 2, name: "Project 2", img: "img/projecto2.jpg" },
+  { id: 3, name: "Project 3", img: "img/projecto3.jpg" },
+  { id: 4, name: "Project 4", img: "img/projecto4.jpg" },
+  { id: 5, name: "Project 5", img: "img/projecto5.jpg" },
+  { id: 6, name: "Project 6", img: "img/projecto6.jpg" },
 ];
 
 export default function Projects() {
@@ -55,10 +55,10 @@ export default function Projects() {
         <div className="projects-header reveal">
           <span className="section-label">Portfolio</span>
           <h2 className="section-title">
-            Nuestros <span className="text-red">Trabajos</span>
+            Our <span className="text-red">Work</span>
           </h2>
           <p className="section-desc">
-            Cada proyecto refleja nuestra pasión por la precisión y la excelencia.
+            Every job reflects our passion for precision and doing things properly.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function Projects() {
               key={p.id}
               className={`pcard reveal reveal-delay-${(i % 3) + 1}`}
               onClick={() => open(i)}
-              aria-label={`Ver ${p.name} en grande`}
+              aria-label={`View ${p.name} full size`}
             >
               <img src={asset(p.img)} alt={p.name} loading="lazy" decoding="async" />
               <span className="pcard__overlay">
@@ -86,14 +86,14 @@ export default function Projects() {
 
       {selected !== null && (
         <div className="lightbox" role="dialog" aria-modal="true" aria-label={projects[selected].name} onClick={close}>
-          <button className="lightbox__close" onClick={close} aria-label="Cerrar">
+          <button className="lightbox__close" onClick={close} aria-label="Close">
             ×
           </button>
           <div className="lightbox__content" onClick={(e) => e.stopPropagation()}>
             <button
               className="lightbox__nav lightbox__nav--prev"
               onClick={(e) => { e.stopPropagation(); prev(); }}
-              aria-label="Anterior"
+              aria-label="Previous"
             >
               ‹
             </button>
@@ -105,7 +105,7 @@ export default function Projects() {
             <button
               className="lightbox__nav lightbox__nav--next"
               onClick={(e) => { e.stopPropagation(); next(); }}
-              aria-label="Siguiente"
+              aria-label="Next"
             >
               ›
             </button>

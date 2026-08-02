@@ -1,21 +1,22 @@
 /*
-  Datos del negocio — editá todo desde acá.
-  El teléfono va en formato internacional sin "+" ni espacios (para WhatsApp).
+  Business details — edit everything from here.
+  The WhatsApp number goes in international format, no "+" and no spaces.
 */
 export const BUSINESS = {
-  name: "MPA Detailer",
+  name: "MPA Detailer Car Care",
+  owner: "Mateo Peralta",
   tagline: "Car Care & Detailing Studio",
-  city: "Buenos Aires, Argentina",
-  phoneDisplay: "+54 9 11 0000-0000",
-  phoneWhatsApp: "5491100000000",
-  email: "info@mpadetailer.com",
+  city: "Bundall, Gold Coast — Australia",
+  phoneDisplay: "+61 451 366 384",
+  phoneWhatsApp: "61451366384",
+  email: "mateoperaltaa21@gmail.com",
   instagram: "https://www.instagram.com/",
   facebook: "https://www.facebook.com/",
   youtube: "https://www.youtube.com/",
-  hours: "Lun a Sáb — 9:00 a 18:00",
+  hours: "Mon to Sat — 9:00 am to 6:00 pm",
 } as const;
 
-/* Prefijo correcto de assets en dev y en GitHub Pages */
+/* Correct asset prefix in dev and on GitHub Pages */
 export const asset = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 

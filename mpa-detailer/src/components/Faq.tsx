@@ -2,24 +2,24 @@ import "./Faq.css";
 
 const faqs = [
   {
-    q: "¿Cuánto dura un detailing completo?",
-    a: "Depende del estado del vehículo y del servicio: un lavado premium lleva medio día, mientras que un paint correction con ceramic coating puede llevar de 2 a 3 días para asegurar el mejor resultado.",
+    q: "How long does a full detail take?",
+    a: "It depends on the size and condition of the vehicle. An express wash takes a couple of hours, while a full detail usually takes most of the day so we can do it properly.",
   },
   {
-    q: "¿Qué es el ceramic coating y cuánto dura?",
-    a: "Es una protección nano-cerámica que se adhiere a la pintura formando una capa dura, hidrofóbica y con brillo espejo. Según el producto y el mantenimiento, dura entre 2 y 5 años.",
+    q: "Do I need to book, or can I just turn up?",
+    a: "We work by appointment so every car gets the time it deserves. Send us a message on WhatsApp and we'll find a day and time that suits you.",
   },
   {
-    q: "¿Trabajan con turnos? ¿Cómo reservo?",
-    a: "Sí, trabajamos únicamente con turnos para dedicarle a cada auto el tiempo que merece. Escribinos por WhatsApp y coordinamos día y horario.",
+    q: "Where are you based?",
+    a: "We're in Bundall, right in the middle of the Gold Coast — easy to reach from Surfers Paradise, Southport, Broadbeach and surrounds.",
   },
   {
-    q: "¿El paint correction elimina cualquier rayadura?",
-    a: "Elimina rayaduras superficiales del clear coat, marcas de remolino y hologramas. Las rayas profundas que llegan a la base se pueden mejorar notablemente, pero requieren repintado.",
+    q: "What's the difference between a wash and a full detail?",
+    a: "A wash cleans the outside of your car safely and thoroughly. A full detail goes much further: interior deep clean, decontamination, polishing and protection for a lasting finish.",
   },
   {
-    q: "¿Qué productos usan?",
-    a: "Trabajamos exclusivamente con productos premium de marcas reconocidas de la industria del detailing, tanto para exterior como para interior.",
+    q: "How much does it cost?",
+    a: "Pricing depends on the size of your vehicle and how much work it needs. Send us a message with a few photos and we'll come back with an exact quote.",
   },
 ];
 
@@ -28,9 +28,9 @@ export default function Faq() {
     <section className="faq section section--alt" id="faq">
       <div className="container faq-inner">
         <div className="faq-header reveal">
-          <span className="section-label">Dudas Frecuentes</span>
+          <span className="section-label">Common Questions</span>
           <h2 className="section-title">
-            Preguntas &amp; <span className="text-red">Respuestas</span>
+            Questions &amp; <span className="text-red">Answers</span>
           </h2>
         </div>
 
