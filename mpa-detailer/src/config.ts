@@ -10,9 +10,7 @@ export const BUSINESS = {
   phoneDisplay: "+61 451 366 384",
   phoneWhatsApp: "61451366384",
   email: "mateoperaltaa21@gmail.com",
-  instagram: "https://www.instagram.com/",
-  facebook: "https://www.facebook.com/",
-  youtube: "https://www.youtube.com/",
+  instagram: "https://www.instagram.com/mpacarcare/",
   hours: "Mon to Sat — 9:00 am to 6:00 pm",
 } as const;
 

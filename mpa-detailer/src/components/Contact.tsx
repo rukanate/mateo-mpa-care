@@ -74,16 +74,6 @@ export default function Contact() {
                 <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" />
               </svg>
             </a>
-            <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer" className="contact-social" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 8h3V5h-3a4 4 0 00-4 4v3H7v3h3v6h3v-6h3l1-3h-4V9a1 1 0 011-1z" />
-              </svg>
-            </a>
-            <a href={BUSINESS.youtube} target="_blank" rel="noopener noreferrer" className="contact-social" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2.5" y="6" width="19" height="12" rx="4" /><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" />
-              </svg>
-            </a>
           </div>
         </div>
 
@@ -149,8 +139,6 @@ export default function Contact() {
           <p>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved.</p>
           <div className="contact-bottom__socials">
             <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href={BUSINESS.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
           </div>
         </div>
       </div>
