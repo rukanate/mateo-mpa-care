@@ -1,37 +1,3 @@
-# MPA Detailer Car Care
+CAR DETAILING PROJECT.
 
-Commercial site / portfolio for MPA Detailer Car Care (Bundall, Gold Coast), built with React + Vite and auto-deployed to GitHub Pages.
 
-**Live site:** https://lucaperalta.github.io/mateo-mpa-care/
-
-## Adding your photos (no code required)
-
-| Section | Folder | File names |
-|---|---|---|
-| Before/After gallery | `mpa-detailer/public/img/gallery/` | `1-antes.jpg` and `1-despues.jpg`, `2-antes.jpg` and `2-despues.jpg`, … |
-| Portfolio | `mpa-detailer/public/img/` | `projecto1.jpg` … `projecto6.jpg` |
-| Logo / favicon | `mpa-detailer/public/` | `logo.png` |
-
-While a gallery photo is missing, that card shows "Photo coming soon" automatically.
-
-## Business details
-
-Phone/WhatsApp, email, socials and opening hours are all edited in one place:
-`mpa-detailer/src/config.ts`
-
-> **Still to replace:** the reviews in `src/components/Testimonials.tsx` are placeholders — swap them
-> for real customer reviews before relying on them.
-
-Copy for packages, services and FAQs lives in the components under `mpa-detailer/src/components/`.
-
-## Development
-
-```bash
-cd mpa-detailer
-npm install
-npm run dev       # local dev server
-npm run build     # production build
-npm run lint      # linter
-```
-
-Deployment to GitHub Pages runs automatically on push to `main` (see `.github/workflows/deploy.yml`).
