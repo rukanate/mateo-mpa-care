@@ -1,68 +1,78 @@
 # MPA Detailer Car Care
 
-Website and portfolio for **MPA Detailer Car Care**, a car care studio based in
-Bundall, on the Gold Coast, Australia. The site showcases the business's work,
-explains what it offers, and turns visitors into bookings through WhatsApp.
+Portfolio website for MPA Detailer Car Care, a car detailing business in
+Bundall, Gold Coast (Australia).
 
 **Live site:** https://rukanate.github.io/mateo-mpa-care/
 
-## What this project is
+## What it does
 
-A single-page site built for one purpose: getting people who are looking for a
-detailer to message the business. Everything on the page is built around that.
+A one-page site that presents the business: the services it offers, photos of
+finished jobs in a before/after comparison, packages, and a contact section.
 
-- **Before/after gallery** — draggable sliders that show real transformations,
-  the strongest sales tool for a detailing business.
-- **Services** — automotive service, auto detailing and car wash, with what each
-  one includes.
-- **Packages** — three tiers (Express Wash, Full Detail, Premium Detail) with
-  quote-based pricing, since the final price depends on the vehicle.
-- **Portfolio, process, testimonials and FAQ** — the context a customer needs
-  before getting in touch.
-- **WhatsApp everywhere** — every button and the contact form open a
-  pre-written message in WhatsApp. There is no backend and no database.
+It is a static site — no server, no database, no user accounts. The contact form
+does not send an email: it takes what the visitor types, builds a message out of
+it and opens WhatsApp with that message ready to send. Every "Book" and
+"Enquire" button works the same way.
 
-The site is a static build, so it costs nothing to host and loads fast.
+## Sections
 
-## Built with
+| Section | File | What it shows |
+|---|---|---|
+| Hero | `Hero.tsx` | Headline, counters, main call to action |
+| About | `About.tsx` | Four cards describing the work |
+| Gallery | `Gallery.tsx` + `BeforeAfter.tsx` | Draggable before/after sliders |
+| Services | `Services.tsx` | Automotive service, auto detailing, car wash |
+| Process | `Process.tsx` | The four steps of a job |
+| Pricing | `Pricing.tsx` | Three packages, quote-based |
+| Portfolio | `Projects.tsx` | Photo grid with a lightbox |
+| Testimonials | `Testimonials.tsx` | Customer reviews |
+| FAQ | `Faq.tsx` | Common questions |
+| Contact | `Contact.tsx` | Details, socials and the WhatsApp form |
 
-React 19 + TypeScript, bundled with Vite. Plain CSS — no UI framework — with a
-dark red-and-black theme, scroll animations that respect
-`prefers-reduced-motion`, and a layout that works from phone to desktop.
-Deployed automatically to GitHub Pages by GitHub Actions.
+Each section is one component plus its own stylesheet, and the order they appear
+in is set in `src/App.tsx`.
+
+## Stack
+
+React 19 and TypeScript, bundled with Vite. Plain CSS, no UI framework. Scroll
+animations come from a small `useReveal` hook built on `IntersectionObserver`,
+which stays disabled when the visitor has reduced motion turned on.
 
 ## Repository layout
 
 ```
-.github/workflows/deploy.yml   build + deploy on every push to main
-mpa-detailer/                  the site itself
+.github/workflows/deploy.yml   builds and deploys on every push to main
+mpa-detailer/                  the site
 ├── public/img/                photos (gallery and portfolio)
 ├── src/components/            one component + one stylesheet per section
-├── src/config.ts              business details, edited in one place
+├── src/hooks/useReveal.ts     scroll animations
+├── src/config.ts              business details
 └── src/App.tsx                section order
 ```
 
-## Adding photos (no code required)
+## Editing content
 
-| Section | Folder | File names |
+**Business details** — phone, WhatsApp number, email, Instagram and opening
+hours are all in `mpa-detailer/src/config.ts`. Changing them there updates the
+whole site.
+
+**Text** — the copy for services, packages, testimonials and FAQs sits in an
+array at the top of each component, meant to be edited directly.
+
+**Photos** — drop the files in and they appear; no code change needed:
+
+| Where | Folder | File names |
 |---|---|---|
-| Before/after gallery | `mpa-detailer/public/img/gallery/` | `1-antes.jpg` and `1-despues.jpg`, `2-antes.jpg` and `2-despues.jpg`, … |
+| Gallery | `mpa-detailer/public/img/gallery/` | `1-antes.jpg` and `1-despues.jpg`, `2-antes.jpg` and `2-despues.jpg`, … |
 | Portfolio | `mpa-detailer/public/img/` | `projecto1.jpg` … `projecto6.jpg` |
 | Logo / favicon | `mpa-detailer/public/` | `logo.png` |
 
-While a gallery photo is missing, that card shows "Photo coming soon" instead of
-breaking the layout.
+A gallery card with no photo yet shows "Photo coming soon" rather than breaking
+the layout.
 
-## Business details
-
-Phone, WhatsApp number, email, Instagram and opening hours all live in
-`mpa-detailer/src/config.ts`. Change them there and they update across the whole
-site. Copy for services, packages, testimonials and FAQs lives in the matching
-component under `mpa-detailer/src/components/`.
-
-> **Still to replace:** the reviews in `src/components/Testimonials.tsx` are
-> placeholders, and the counters in the hero (cars detailed, years of
-> experience) are examples. Swap them for real figures before relying on them.
+> **Placeholder content:** the reviews in `Testimonials.tsx` and the counters in
+> `Hero.tsx` are examples, not real data. Replace them with real figures.
 
 ## Development
 
@@ -76,7 +86,9 @@ npm run lint      # linter
 
 ## Deployment
 
-Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the
-site and publishes it to GitHub Pages. The Pages source must stay set to
-**GitHub Actions** (Settings → Pages); on "Deploy from a branch" GitHub renders
-this README as the site instead of the built app.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and
+publishes it to GitHub Pages.
+
+The Pages source must stay set to **GitHub Actions** (Settings → Pages). On
+"Deploy from a branch" GitHub runs Jekyll instead, which publishes this README
+as the site's home page rather than the built app.
